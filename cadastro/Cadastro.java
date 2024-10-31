@@ -1,40 +1,30 @@
 package cadastro;
 
+import pessoa.Pessoa;
 import pessoa.PessoaFisica;
 import pessoa.PessoaJuridica;
 
 public class Cadastro {
-    int contPessoaFisica, contPessoaJuridica, quantidade;
-    PessoaFisica[] pessoasFisicas;
-    PessoaJuridica[] pessoasJuridicas;
+    int cont, quantidade;
+    Pessoa[] pessoas;
 
     public Cadastro(int quantidade){
-       this.contPessoaFisica = 0;
-       this.contPessoaJuridica = 0;
+       this.cont = 0;
        this.quantidade = quantidade;
-       pessoasFisicas = new PessoaFisica[quantidade];
-       pessoasJuridicas = new PessoaJuridica[quantidade];
+       pessoas = new Pessoa[quantidade];
     }
 
-    public void cadastrarPessoaFisica(PessoaFisica pessoaFisica){
-        if(this.contPessoaFisica < this.quantidade)
-           pessoasFisicas[this.contPessoaFisica++] = pessoaFisica;
-    }
-
-    public void cadastrarPessoaJuridica(PessoaJuridica pessoaJuridica){
-        if(this.contPessoaJuridica < this.quantidade)
-           pessoasJuridicas[this.contPessoaJuridica++] = pessoaJuridica;
+    public void cadastrar(Pessoa pessoa){
+        if(this.cont < this.quantidade)
+           pessoas[this.cont++] = pessoa;
     }
 
     public String toString(){
-        String mensagem = "--- Pessoas Fisicas Cadastradas: ---\n";
-        for(PessoaFisica pessoaFisica : pessoasFisicas)
-          mensagem += pessoaFisica.toString() + "\n";
-        
-        mensagem += "\n\n--- Pessoas Juridicas Cadastradas: ---\n";
-        for(PessoaJuridica pessoaJuridica : pessoasJuridicas)
-          mensagem += pessoaJuridica.toString() + "\n";
+        String mensagem = "--- Pessoas Cadastradas: ---\n";
 
+        for(Pessoa pessoa : pessoas)
+          mensagem += pessoa.toString() + "\n";
+        
         return mensagem;
     }
 }

@@ -1,15 +1,14 @@
 package pessoa;
 
-public class PessoaFisica {
-   private String nome;
+public class PessoaFisica extends Pessoa {
    private String cpf;
 
    public PessoaFisica(String cpf, String nome) {
+    super(nome);
     this.cpf = cpf;
-    this.nome = nome;
    }
 
    public String toString() {
-    return "CPF: " + this.cpf + ", Nome: " + this.nome;
+    return "CPF: " + this.cpf + ", " + super.toString();
    }
 }
