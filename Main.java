@@ -18,6 +18,9 @@ public class Main {
         cadastro.cadastrar(pessoaFisica2);
         cadastro.cadastrar(pessoaFisica3);
 
+        pessoaFisica3.cumprimentar();
+        pessoaFisica3.cumprimentar("PessoaFisica3");
+
         cadastro.cadastrar(pessoaJuridica1);
         cadastro.cadastrar(pessoaJuridica2);
         cadastro.cadastrar(pessoaJuridica3);

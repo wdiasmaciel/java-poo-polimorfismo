@@ -19,12 +19,18 @@ public class Cadastro {
            pessoas[this.cont++] = pessoa;
     }
 
+    @Override
     public String toString(){
         String mensagem = "--- Pessoas Cadastradas: ---\n";
 
-        for(Pessoa pessoa : pessoas)
+        for(Pessoa pessoa : pessoas) {
           mensagem += pessoa.toString() + "\n";
-        
+          pessoa.cumprimentar();
+          //pessoa.NUM = 3; //ERRO.
+          //pessoa.NASCIMENTO = "xyz"; //ERRO.
+          System.out.println(pessoa.NUM);
+          System.out.println(pessoa.NASCIMENTO);
+        }
         return mensagem;
     }
 }

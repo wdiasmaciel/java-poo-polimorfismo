@@ -7,7 +7,8 @@ public class PessoaJuridica extends Pessoa {
     super(nome);
     this.cnpj = cnpj;
    }
-
+   
+   @Override
    public String toString() {
     return "CNPJ: " + this.cnpj + ", " + super.toString();
    }
